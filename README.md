@@ -27,7 +27,7 @@ docker exec -it app_gitlab_runner gitlab-runner register
   Nhập : docker
 
 - Enter the default Docker image (for example, ruby:2.7):
-  Nhập : node:12.16.1-alpine
+  Nhập : node:16-alpine3.14
 
 # Thiết lập các biến CICD (CICD variables)
 Sử dụng Gitlab CI/CD Variables để lưu khóa SSH riêng tư mà Gitlab sẽ sử dụng để xác thực với máy chủ.
