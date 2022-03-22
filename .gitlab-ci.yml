@@ -30,6 +30,6 @@ ssh:
     - >
       ssh -t -t $SSH_SERVER_USER@$SSH_SERVER_IP
       "cd ${PATH_TO_PROJECT};
-      git pull origin develop;
+      git pull origin merge_requests;
       docker-compose up -d;
       "
