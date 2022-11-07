@@ -1,0 +1,17 @@
+.default-layout {
+  display: flex;
+  flex-direction: row;
+
+  .default-main {
+    width: calc(100vw - 238px);
+  }
+
+  .default-content {
+    width: calc(100% - 16px);
+    height: calc(100% - 112px);
+    margin: 16px 8px 8px 8px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 8px 8px $color-disbaled-light;
+    background: $color-white;
+  }
+}
