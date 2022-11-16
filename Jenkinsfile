@@ -22,11 +22,11 @@ pipeline {
         sh 'npm install'
       }
     }
-    stage('Unit Test') {
-      steps {
-        // sh 'npm run unit'
-      }
-    }
+    // stage('Unit Test') {
+    //   steps {
+    //     sh 'npm run unit'
+    //   }
+    // }
     stage('Eslint') {
       steps {
         sh 'npm run lint:fix'
