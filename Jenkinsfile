@@ -8,7 +8,7 @@ pipeline {
             // print "Environment will be : ${env.NODE_ENV}"
             steps {
                 sh 'node -v'
-                sh 'npm prune'
+                // sh 'npm prune'
                 sh 'npm install'
                 sh 'npm lint:fix'
             }
