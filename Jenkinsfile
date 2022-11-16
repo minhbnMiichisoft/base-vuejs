@@ -4,8 +4,8 @@ pipeline {
     agent { docker { image 'node:16.17.1-alpine' } }
     stages {
         stage('Test'){
-            env.NODE_ENV = "test"
-            print "Environment will be : ${env.NODE_ENV}"
+            // env.NODE_ENV = "test"
+            // print "Environment will be : ${env.NODE_ENV}"
 
             sh 'node -v'
             sh 'npm prune'
