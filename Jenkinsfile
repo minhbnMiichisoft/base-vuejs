@@ -32,7 +32,7 @@ pipeline {
     }
     stage('Build') {
       steps {
-        sh 'export NODE_OPTIONS=--openssl-legacy-provider'
+        sh 'ENV NODE_OPTIONS=--openssl-legacy-provider'
         sh 'npm run build'
       }
     }
