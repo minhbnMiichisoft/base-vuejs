@@ -3,6 +3,8 @@ pipeline {
   agent {
     docker {
       image 'node'
+      // https://stackoverflow.com/questions/67163194/jenkins-build-issue-npm-err-your-cache-folder-contains-root-owned-files
+      args '-u root:root'
     }
   }
   stages {
@@ -19,6 +21,8 @@ pipeline {
     }
     stage('Dependencies') {
       steps {
+        // Your cache folder contains root-owned files, due to a bug in
+        // npm ERR! previous versions of npm which has since been addressed.
         sh 'sudo chown -R 129:137 "/.npm"'
         sh 'npm install'
       }
