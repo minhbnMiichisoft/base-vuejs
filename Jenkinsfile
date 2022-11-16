@@ -23,7 +23,7 @@ pipeline {
       steps {
         // Your cache folder contains root-owned files, due to a bug in
         // npm ERR! previous versions of npm which has since been addressed.
-        sh 'sudo chown -R 129:137 "/.npm"'
+        // sh 'sudo chown -R 129:137 "/.npm"'
         sh 'npm install'
       }
     }
