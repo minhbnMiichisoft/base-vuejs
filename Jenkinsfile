@@ -18,11 +18,12 @@ pipeline {
                 sh 'node --version'
             }
         }
-
-        stage('Cleanup'){
-            echo 'prune and cleanup'
-            sh 'npm prune'
-            sh 'rm node_modules -rf'
+        stage('Cleanup') {
+            steps {
+                echo 'prune and cleanup'
+                sh 'npm prune'
+                sh 'rm node_modules -rf'
+            }
         }
     }
  }
